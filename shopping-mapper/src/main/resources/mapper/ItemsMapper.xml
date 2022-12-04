@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qq.mapper.ItemsMapper">
+
+    <resultMap id="BaseResultMap" type="com.qq.pojo.Items">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="item_name" column="item_name" jdbcType="VARCHAR"/>
+            <result property="cat_id" column="cat_id" jdbcType="INTEGER"/>
+            <result property="root_cat_id" column="root_cat_id" jdbcType="INTEGER"/>
+            <result property="sell_counts" column="sell_counts" jdbcType="INTEGER"/>
+            <result property="on_off_status" column="on_off_status" jdbcType="INTEGER"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="created_time" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updated_time" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,item_name,cat_id,
+        root_cat_id,sell_counts,on_off_status,
+        content,created_time,updated_time
+    </sql>
+</mapper>

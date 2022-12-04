@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qq.mapper.OrderStatusMapper">
+
+    <resultMap id="BaseResultMap" type="com.qq.pojo.OrderStatus">
+            <id property="order_id" column="order_id" jdbcType="VARCHAR"/>
+            <result property="order_status" column="order_status" jdbcType="INTEGER"/>
+            <result property="created_time" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="pay_time" column="pay_time" jdbcType="TIMESTAMP"/>
+            <result property="deliver_time" column="deliver_time" jdbcType="TIMESTAMP"/>
+            <result property="success_time" column="success_time" jdbcType="TIMESTAMP"/>
+            <result property="close_time" column="close_time" jdbcType="TIMESTAMP"/>
+            <result property="comment_time" column="comment_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        order_id,order_status,created_time,
+        pay_time,deliver_time,success_time,
+        close_time,comment_time
+    </sql>
+</mapper>
